@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10251f">
+  <meta name="description" content="Writing, translation, and proofreading services in Indonesian, English, Javanese, and Sundanese.">
+  <title>Tegar | Writing & Translation</title>
+
+  <style>
+    :root {
+      --bg: #0c1714;
+      --panel: #14241f;
+      --green: #b9e4c9;
+      --cream: #f4f0e5;
+      --muted: #b0beb7;
+      --line: #2b4038;
+      --gold: #e2bd7b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 76px 0 65px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 67px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 20px 0;
+      max-width: 760px;
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #10251f;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--cream);
+    }
+
+    section {
+      padding: 55px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.25;
+      margin: 10px 0 25px;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .icon {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .language-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .language {
+      border: 1px solid #496356;
+      color: var(--green);
+      background: #192e25;
+      padding: 8px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    .sample {
+      margin-top: 14px;
+      padding: 15px;
+      background: #0d1b16;
+      border-radius: 8px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .sample small {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .sample p {
+      color: var(--cream);
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .steps {
+      padding-left: 20px;
+    }
+
+    .steps li {
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    footer {
+      padding: 25px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .card {
+        padding: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#home">Tegar<span>Anggara.</span></a>
+
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#languages">Languages</a>
+          <a href="#samples">Samples</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="hero" id="home" style="border-top:none">
+        <div class="eyebrow">Writing · Translation · Editing</div>
+
+        <h1>
+          The right words,<br>
+          with <span>meaning.</span>
+        </h1>
+
+        <p>
+          Helping individuals and businesses communicate
+          through clear writing, natural translations,
+          and carefully edited content.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">
+            Get in Touch ↗
+          </a>
+          <a class="btn btn-secondary" href="#samples">
+            View My Samples
+          </a>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-label">What I Do</div>
+        <h2>Services for your needs.</h2>
+
+        <p class="intro">
+          Choose a service for your personal projects,
+          business, digital content, or everyday documents.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">✍️</div>
+            <h3>Content Writing</h3>
+            <p>
+              Product descriptions, social media captions,
+              simple articles, and promotional content.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Translation</h3>
+            <p>
+              Translation tailored to your language pair,
+              context, audience, and preferred writing style.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📝</div>
+            <h3>Proofreading</h3>
+            <p>
+              Checking spelling, punctuation, sentence
+              structure, and consistency.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💡</div>
+            <h3>Language Editing</h3>
+            <p>
+              Making your writing more formal, conversational,
+              polite, or suitable for your target audience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages">
+        <div class="section-label">Languages</div>
+        <h2>Four languages, one goal.</h2>
+
+        <p class="intro">
+          My portfolio focuses on writing and language services
+          in the following languages:
+        </p>
+
+        <div class="language-list">
+          <span class="language">🇮🇩 Indonesian</span>
+          <span class="language">🇬🇧 English</span>
+          <span class="language">🌾 Javanese</span>
+          <span class="language">🌿 Sundanese</span>
+        </div>
+
+        <div class="card" style="margin-top:22px">
+          <h3>Language Pairs</h3>
+          <p>
+            Indonesian ↔ English<br>
+            Indonesian ↔ Javanese<br>
+            Indonesian ↔ Sundanese<br>
+            Javanese ↔ Sundanese<br>
+            English ↔ Javanese or Sundanese, depending
+            on the project and language proficiency.
+          </p>
+
+          <p class="note">
+            Translation accuracy, regional dialects, cultural
+            context, and appropriate levels of politeness
+            should always be checked before delivery.
+          </p>
+        </div>
+      </section>
+
+      <section id="samples">
+        <div class="section-label">Selected Work</div>
+        <h2>Portfolio samples.</h2>
+
+        <p class="intro">
+          These short demonstrations illustrate my approach
+          to writing and translation.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>01 — Indonesian to English</h3>
+
+            <div class="sample">
+              <small>Indonesian</small>
+              <p>
+                Kami membantu bisnis Anda menyampaikan pesan
+                dengan lebih jelas.
+              </p>
+            </div>
+
+            <div class="sample">
+              <small>English</small>
+              <p>
+                We help your business communicate its message
+                more clearly.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>02 — Indonesian to Javanese</h3>
+
+            <div class="sample">
+              <small>Indonesian</small>
+              <p>Terima kasih sudah membantu saya.</p>
+            </div>
+
+            <div class="sample">
+              <small>Javanese — Ngoko</small>
+              <p>Matur nuwun wis nulungi aku.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>03 — Indonesian to Sundanese</h3>
+
+            <div class="sample">
+              <small>Indonesian</small>
+              <p>Terima kasih sudah membantu saya.</p>
+            </div>
+
+            <div class="sample">
+              <small>Sundanese — Polite Form</small>
+              <p>Hatur nuhun parantos ngabantosan abdi.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>04 — Content Writing</h3>
+
+            <div class="sample">
+              <small>Product Description</small>
+              <p>
+                Simple, practical, and easy to use.
+                Find the right choice for your everyday needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="note">
+          Note: These are demonstration samples, not paid client
+          projects. Javanese and Sundanese translations may vary
+          by region, dialect, and level of formality.
+        </p>
+      </section>
+
+      <section id="about">
+        <div class="section-label">About Me</div>
+        <h2>Building trust through words.</h2>
+
+        <p class="intro">
+          I am building my portfolio in writing and translation.
+          I value clear communication, attention to detail,
+          and a willingness to improve my work based on
+          agreed feedback.
+        </p>
+
+        <div class="card">
+          <h3>My Workflow</h3>
+
+          <ol class="steps">
+            <li>Discuss your needs and the purpose of the text.</li>
+            <li>Confirm the language, style, length, and deadline.</li>
+            <li>Complete the work and review the result.</li>
+            <li>Deliver the work for review and agreed revisions.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-label">Let's Work Together</div>
+        <h2>Have a project in mind?</h2>
+
+        <div class="contact-box">
+          <p class="intro">
+            Contact me to discuss your writing, translation,
+            or proofreading needs.
+          </p>
+
+          <div class="actions">
+            <!-- Replace with your own WhatsApp number -->
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/6289678775410"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp ↗
+            </a>
+
+            <!-- Replace with your own email address -->
+            <a
+              class="btn btn-secondary"
+              href="mailto:tegaranggaraputra71@gmail.com"
+            >
+              Send an Email
+            </a>
+          </div>
+
+          <p class="note">
+            Remember to replace the sample WhatsApp number
+            and email address with your own contact details
+            before publishing your website.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Tegar Anggara. Created with a passion for learning and creativity.
+    </div>
+  </footer>
+</body>
+</html>
